@@ -2,7 +2,7 @@ title: Flaaax的博客
 author: Flaaax
 email: 2958152232@qq.com
 description: >-
-  简介（待定）
+  这是简介
 
 url: "https://flaaax.github.io"
 baseurl: ""
@@ -21,4 +21,4 @@ theme_config:
   back_home_text: ".."
   date_format: "%Y-%m-%d"
   show_description: true
-  lowercase_titles: true
+  # lowercase_titles: true

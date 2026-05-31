@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+<header class="home-header">
+  <div class="home-title-row">
+    <img class="home-avatar" src="{{ '/assets/img/avatar.jpg' | relative_url }}" alt="{{ site.title }} avatar">
+    <h1 class="home-title">{{ site.title }}</h1>
+  </div>
+
+  {% if site.theme_config.show_description %}
+    <p class="home-description">{{ site.description }}</p>
+  {% endif %}
+</header>
+
+{%- include menu_item.html collection=site.data.menu.entries -%}
+
+{{ content }}

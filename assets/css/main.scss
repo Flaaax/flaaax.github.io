@@ -1,0 +1,84 @@
+---
+---
+
+@import "no-style-please";
+
+// 头图
+.home-header {
+  margin: 0 0 1.5rem 0;
+  padding: 0;
+}
+
+.home-title-row {
+  display: flex;
+  align-items: center;
+  column-gap: 0.4rem;
+  margin: 0;
+  padding: 0;
+}
+
+.home-avatar {
+  display: block;
+  width: 36px;
+  height: 36px;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  object-fit: contain;
+  flex: 0 0 36px;
+}
+
+.home-title {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+.home-description {
+  display: block;
+  margin: 0.35rem 0 0 0;
+  padding: 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* 全站字体 */
+body {
+  font-family: Consolas, "Microsoft YaHei", "微软雅黑", monospace;
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+/* 标题大小 */
+h1 {
+  font-size: 2.4rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+/* 文章正文稍微舒服一点 */
+p, li {
+  line-height: 1.7;
+}
+
+/* 代码仍然优先用 Consolas */
+code, pre {
+  font-family: Consolas, "Courier New", monospace;
+}
+
+/* 手机屏幕上稍微小一点 */
+// @media (max-width: 700px) {
+//   body {
+//     font-size: 16px;
+//   }
+
+//   h1 {
+//     font-size: 2rem;
+//   }
+// }

@@ -1,16 +1,15 @@
 entries:
-  - title: info
+  - title: 链接
     entries:
-      - title: 这是我的个人博客。
       - title: GitHub
         url: https://github.com/flaaax
 
-  - title: all posts
+  - title: 文章
     post_list:
       limit: 5
       show_more: true
       show_more_text: 查看全部文章
       show_more_url: archive.html
 
-  - title: rss
-    url: feed.xml
+  # - title: rss
+  #   url: feed.xml
