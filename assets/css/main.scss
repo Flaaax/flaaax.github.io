@@ -52,6 +52,19 @@ body {
   font-family: Consolas, "Microsoft YaHei", "微软雅黑", monospace;
   font-size: 1.125rem;
   line-height: 1.65;
+
+  // max-width: 820px;
+  // margin: 40px auto;
+  // padding: 0 16px;
+  // box-sizing: border-box;
+}
+
+/* 行宽设置 */
+.w {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  box-sizing: border-box;
 }
 
 /* 标题大小 */
@@ -68,13 +81,244 @@ h3 {
 }
 
 /* 文章正文稍微舒服一点 */
-p, li {
+p,
+li {
   line-height: 1.7;
 }
 
 /* 代码仍然优先用 Consolas */
-code, pre {
+code,
+pre {
   font-family: Consolas, "Courier New", monospace;
+}
+
+code {
+  padding: 0.08rem 0.24rem;
+  border: 1px solid #d8dee4;
+  border-radius: 4px;
+  color: #24292f;
+  background: #f1f3f5;
+}
+
+pre,
+.highlight,
+.highlight pre,
+pre.highlight,
+div.highlighter-rouge code {
+  color: #e6edf3;
+  background: #0d1117;
+}
+
+.highlight {
+  margin: 1rem 0;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.highlight pre,
+pre.highlight {
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+}
+
+div.highlighter-rouge code {
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  white-space: pre;
+}
+
+.highlight .c,
+.highlight .cm,
+.highlight .cp,
+.highlight .c1,
+.highlight .cs {
+  color: #8b949e;
+  font-style: italic;
+}
+
+.highlight .k,
+.highlight .kc,
+.highlight .kd,
+.highlight .kn,
+.highlight .kp,
+.highlight .kr {
+  color: #ff7b72;
+}
+
+.highlight .kt,
+.highlight .nc,
+.highlight .nn {
+  color: #ffa657;
+}
+
+.highlight .s,
+.highlight .sa,
+.highlight .sb,
+.highlight .sc,
+.highlight .dl,
+.highlight .sd,
+.highlight .s2,
+.highlight .se,
+.highlight .sh,
+.highlight .si,
+.highlight .sx,
+.highlight .sr,
+.highlight .s1,
+.highlight .ss {
+  color: #a5d6ff;
+}
+
+.highlight .m,
+.highlight .mb,
+.highlight .mf,
+.highlight .mh,
+.highlight .mi,
+.highlight .mo,
+.highlight .il {
+  color: #79c0ff;
+}
+
+.highlight .nf,
+.highlight .fm,
+.highlight .na {
+  color: #d2a8ff;
+}
+
+.highlight .o,
+.highlight .ow {
+  color: #ff7b72;
+}
+
+.highlight .nb,
+.highlight .bp,
+.highlight .no,
+.highlight .nd,
+.highlight .ni,
+.highlight .ne,
+.highlight .nl,
+.highlight .nt,
+.highlight .nv,
+.highlight .vc,
+.highlight .vg,
+.highlight .vi,
+.highlight .vm {
+  color: #79c0ff;
+}
+
+.highlight .err {
+  color: #ffdcd7;
+  background: #67060c;
+}
+
+// no-style-please 的暗色模式通过整页反相实现，所以这里使用反相前的颜色。
+@mixin inverted-code-colors {
+  code {
+    color: #19120c;
+    background: #e0dcd7;
+    border-color: #c8c4bf;
+  }
+
+  pre,
+  .highlight,
+  .highlight pre,
+  pre.highlight,
+  div.highlighter-rouge code {
+    color: #19120c;
+    background: #f2eee8;
+  }
+
+  .highlight {
+    border-color: #cfc9c2;
+  }
+
+  .highlight .c,
+  .highlight .cm,
+  .highlight .cp,
+  .highlight .c1,
+  .highlight .cs {
+    color: #746b61;
+  }
+
+  .highlight .k,
+  .highlight .kc,
+  .highlight .kd,
+  .highlight .kn,
+  .highlight .kp,
+  .highlight .kr,
+  .highlight .o,
+  .highlight .ow {
+    color: #00848d;
+  }
+
+  .highlight .kt,
+  .highlight .nc,
+  .highlight .nn {
+    color: #0059a8;
+  }
+
+  .highlight .s,
+  .highlight .sa,
+  .highlight .sb,
+  .highlight .sc,
+  .highlight .dl,
+  .highlight .sd,
+  .highlight .s2,
+  .highlight .se,
+  .highlight .sh,
+  .highlight .si,
+  .highlight .sx,
+  .highlight .sr,
+  .highlight .s1,
+  .highlight .ss {
+    color: #5a2900;
+  }
+
+  .highlight .m,
+  .highlight .mb,
+  .highlight .mf,
+  .highlight .mh,
+  .highlight .mi,
+  .highlight .mo,
+  .highlight .il,
+  .highlight .nb,
+  .highlight .bp,
+  .highlight .no,
+  .highlight .nd,
+  .highlight .ni,
+  .highlight .ne,
+  .highlight .nl,
+  .highlight .nt,
+  .highlight .nv,
+  .highlight .vc,
+  .highlight .vg,
+  .highlight .vi,
+  .highlight .vm {
+    color: #863f00;
+  }
+
+  .highlight .nf,
+  .highlight .fm,
+  .highlight .na {
+    color: #2d5700;
+  }
+
+  .highlight .err {
+    color: #002328;
+    background: #98f9f3;
+  }
+}
+
+body[a="dark"] {
+  @include inverted-code-colors;
+}
+
+@media (prefers-color-scheme: dark) {
+  body[a="auto"] {
+    @include inverted-code-colors;
+  }
 }
 
 /* 手机屏幕上稍微小一点 */
