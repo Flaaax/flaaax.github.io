@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<a href="{{ '/' | relative_url }}">{{ site.theme_config.back_home_text | default: '..' }}</a>
+
+<article class="post">
+  <h1>{{ page.title }}</h1>
+
+  <p class="post-meta">
+    {% assign date_format = site.theme_config.date_format | default: "%Y-%m-%d" %}
+    {{ page.date | date: date_format }}
+
+    {% if page.categories and page.categories.size > 0 %}
+      · {{ page.categories | join: " / " }}
+    {% endif %}
+  </p>
+
+  {{ content }}
+</article>

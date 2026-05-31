@@ -3,6 +3,11 @@
 
 @import "no-style-please";
 
+// 整体放大，接近浏览器 110% 缩放效果
+html {
+  font-size: 110%;
+}
+
 // 头图
 .home-header {
   margin: 0 0 1.5rem 0;
@@ -19,13 +24,13 @@
 
 .home-avatar {
   display: block;
-  width: 36px;
-  height: 36px;
+  width: 2.25rem;
+  height: 2.25rem;
   margin: 0;
   padding: 0;
   border-radius: 0;
   object-fit: contain;
-  flex: 0 0 36px;
+  flex: 0 0 2.25rem;
 }
 
 .home-title {
@@ -38,14 +43,14 @@
   display: block;
   margin: 0.35rem 0 0 0;
   padding: 0;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   line-height: 1.4;
 }
 
 /* 全站字体 */
 body {
   font-family: Consolas, "Microsoft YaHei", "微软雅黑", monospace;
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 1.65;
 }
 

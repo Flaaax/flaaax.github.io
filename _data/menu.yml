@@ -3,6 +3,10 @@ entries:
     entries:
       - title: GitHub
         url: https://github.com/flaaax
+      - title: Repo
+        url: https://github.com/Flaaax/flaaax.github.io
+      - title: b站
+        url: https://space.bilibili.com/450151230
 
   - title: 文章
     post_list:
